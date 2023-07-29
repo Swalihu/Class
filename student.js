@@ -3,7 +3,7 @@
             const videoElement = document.getElementById('teacher-video');
 
             // Connect to the WebSocket server (replace 'wss://your-websocket-server' with the actual server URL)
-            const socket = new WebSocket('wss://127.0.0.1:8080/teacher.html');
+            const socket = new WebSocket('wss://swalihu.github.io/Class/teacher.html');
  
             //Event listener for when the WebSocket connection is established
             socket.addEventListener('open', () => {
