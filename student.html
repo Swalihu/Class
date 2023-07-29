@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Live Class - Student View</title>
+    <link rel="stylesheet" type="text/css" href="student.css">
+</head>
+<style>
+
+</style>
+<body>
+    <div class="video-container">
+     <video id="teacher-video" autoplay playsinline></video>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            COMMENT BOX
+        </div>
+        <div class="chat-history" id="chat-history">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." onkeyup="checkEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>

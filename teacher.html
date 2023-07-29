@@ -1,0 +1,48 @@
+<!-- Paste the teacher's code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="teacher.css">
+    <title>Online Live Class</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="teacher-video" autoplay playsinline muted></video>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            COMMENT BOX
+        </div>
+        <div class="chat-history" id="chat-history">
+            <!-- Chat messages will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript code for accessing the webcam and displaying the teacher's video
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoElement = document.getElementById('teacher-video');
+
+            // Check if the browser supports media devices
+            if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+                // Access the user's webcam
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then((stream) => {
+                        // Display the teacher's video in the video element
+                        videoElement.srcObject = stream;
+                    })
+                    .catch((error) => {
+                        console.error('Error accessing the webcam:', error);
+                    });
+            } else {
+                console.error('getUserMedia is not supported in this browser.');
+            }
+        });
+    </script>
+</body>
+</html>
